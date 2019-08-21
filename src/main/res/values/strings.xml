@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DisysDemo</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="login_failed">Login Failed</string>
+</resources>

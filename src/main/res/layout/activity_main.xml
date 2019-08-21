@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="login"
+            type="com.dysisdemo.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_username"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/hint_username"
+                android:singleLine="true"
+                android:text="@={login.username}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text="@={login.password}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_username" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                android:background="@color/login_btn_bg"
+                android:onClick="@{() -> login.loginUser()}"
+                android:text="@string/log_in"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_password" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
